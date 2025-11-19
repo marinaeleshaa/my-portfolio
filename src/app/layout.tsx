@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Dock from "@/components/Dock";
+import { VscAccount, VscArchive, VscHome, VscSettingsGear } from "react-icons/vsc";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,12 +25,41 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const items = [
+    {
+      icon: <VscHome size={18} />,
+      label: "Home",
+    },
+    {
+      icon: <VscArchive size={18} />,
+      label: "Archive",
+    },
+    {
+      icon: <VscAccount size={18} />,
+      label: "Profile",
+    },
+    {
+      icon: <VscSettingsGear size={18} />,
+      label: "Settings",
+    },
+  ];
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
-        {children}
+        <div className="relative min-h-screen">
+          <div>{children}</div>
+          <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+            <Dock
+              items={items}
+              panelHeight={68}
+              baseItemSize={50}
+              magnification={70}
+              className="text-white"
+            />
+          </div>
+        </div>
       </body>
     </html>
   );
