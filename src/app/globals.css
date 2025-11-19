@@ -5,6 +5,7 @@
 
 * {
   box-sizing: border-box;
+
 }
 
 .my-text-light{
@@ -19,8 +20,19 @@
   color:#FF9FFC
 }
 
+.my-light-bg{
+  background-color:#B19EEF
+}
+.my-pink-bg{
+  background-color:#FF9FFC
+}
+
+.my-dark-bg{
+  background-color:#5227FF
+}
+
 .my-main-btn{
-  @apply px-8 py-4 border-none capitalize rounded-full cursor-pointer bg-linear-to-br from-[#5227FF] to-[#FF9FFC] text-white;
+  @apply px-8 py-4   border-none capitalize rounded-full cursor-pointer bg-linear-to-br from-[#5227FF] to-[#FF9FFC] text-white;
 }
 
 .my-second-btn{
