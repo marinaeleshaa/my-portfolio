@@ -50,7 +50,7 @@ export default function RootLayout({
       >
         <div className="relative min-h-screen">
           <div>{children}</div>
-          <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+          <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2">
             <Dock
               items={items}
               panelHeight={68}
