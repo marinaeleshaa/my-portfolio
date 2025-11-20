@@ -7,7 +7,7 @@ import {
   Inconsolata,
 } from "next/font/google";
 import "./globals.css";
-import Dock from "@/components/Dock";
+import Dock from "@/components/common/Dock";
 import navData from "@/data/navData";
 
 const geistSans = Geist({

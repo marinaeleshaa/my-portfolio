@@ -1,5 +1,5 @@
-import AnimatedComputer from "@/components/aboutComponents/AnimatedComputer";
-import LeftSide from "@/components/aboutComponents/LeftSide";
+import AnimatedComputer from "@/components/about/AnimatedComputer";
+import LeftSide from "@/components/about/LeftSide";
 const AboutSection = () => {
   return (
     <div className="bg-black  flex justify-center px-4">

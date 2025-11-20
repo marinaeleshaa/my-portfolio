@@ -24,6 +24,8 @@ import {
   VscHome,
   VscSettingsGear,
 } from "react-icons/vsc";
+import { FaTasks } from "react-icons/fa";
+
 
 export type DockItemData = {
   icon: string; // string not JSX (important for SSR)
@@ -55,7 +57,8 @@ type DockItemProps = {
 const iconMap: Record<string, React.ReactNode> = {
   home: <VscHome size={18} />,
   about: <VscAccount size={18} />,
-  archive: <VscArchive size={18} />,
+  achievements:<FaTasks size={18} />,
+
   settings: <VscSettingsGear size={18} />,
 };
 
@@ -167,10 +170,16 @@ export default function Dock({
           hero?.scrollIntoView({ behavior: "smooth"});
         };
         break;
-      case "About":
+      case "About Me":
         onClick = () => {
           const about = document.getElementById("aboutSection");
           about?.scrollIntoView({ behavior: "smooth" });
+        };
+        break;
+        case "Achievements":
+        onClick = () => {
+          const achievements = document.getElementById("achievementsSection");
+          achievements?.scrollIntoView({ behavior: "smooth" });
         };
         break;
       default:
@@ -187,7 +196,7 @@ export default function Dock({
   return (
     <motion.div
       style={{ height }}
-      className="mx-2 flex max-w-full items-center"
+      className="mx-2 flex max-w-full items-center "
     >
       <motion.div
         onMouseMove={({ pageX }) => {
@@ -198,7 +207,7 @@ export default function Dock({
           isHovered.set(0);
           mouseX.set(Infinity);
         }}
-        className={`${className} absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-4 rounded-2xl border-neutral-700 border-2 pb-2 px-4 `}
+        className={`${className} absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-4 rounded-2xl border-neutral-700 backdrop-blur-3xl bg-white/10 z-999 border-2 pb-2 px-4 `}
         style={{ height: panelHeight }}
       >
         {enhancedItems.map((item, idx) => (
@@ -210,7 +219,7 @@ export default function Dock({
             distance={distance}
             magnification={magnification}
             baseItemSize={baseItemSize}
-            className="cursor-pointer"
+            className="cursor-pointer backdrop-blur-2xl bg-white/20"
           >
             <DockIcon>{item.icon}</DockIcon>
             <DockLabel>{item.label}</DockLabel>

@@ -6,13 +6,17 @@ const LeftSide = () => {
   return (
     <motion.div
       className="w-full md:max-w-xl lg:max-w-2xl relative"
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.7 }}
     >
       <div
-        className="absolute -top-4 -left-4 w-12 h-12 md:w-16 md:h-16 border-l-4 border-t-4 opacity-60"
+        className="absolute -top-4 -left-4 w-12 h-12 md:w-16 md:h-16 rounded-tl-lg border-l-4 border-t-4 opacity-60"
+        style={{ borderColor: "#FF9FFC" }}
+      ></div>
+      <div
+        className="absolute -bottom-4 -right-4 w-12 h-12 md:w-16 md:h-16 rounded-br-lg border-r-4 border-b-4 opacity-60"
         style={{ borderColor: "#FF9FFC" }}
       ></div>
 

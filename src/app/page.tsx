@@ -1,5 +1,6 @@
-import SplashCursor from "@/components/SplashCursor";
+import SplashCursor from "@/components/common/SplashCursor";
 import AboutSection from "@/sections/AboutSection";
+import AchievementsSection from "@/sections/AchievementsSection";
 import HeroSection from "@/sections/HeroSection";
 
 export default function Home() {
@@ -9,10 +10,12 @@ export default function Home() {
       <div id="heroSection">
         <HeroSection />
       </div>
-      <div className="md:w-[75%] mx-auto px-10 md:px-0">
-        <div id="aboutSection" className="min-h-screen">
+      <div className="md:w-[75%] mx-auto px-10 md:px-0 space-y-20">
+        <div id="aboutSection" className="">
           <AboutSection />
-          
+        </div>
+        <div id="achievementsSection" className="">
+          <AchievementsSection />
         </div>
       </div>
     </div>
