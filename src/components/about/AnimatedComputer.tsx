@@ -3,7 +3,7 @@ import Lottie from "lottie-react";
 import animationData from "@/animations/Programming Computer.json";
 import { motion } from "framer-motion";
 
-const AnimatedComputer = () => {
+const   AnimatedComputer = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

@@ -5,9 +5,14 @@ import SpotlightCard from "./SpotlightCard";
 import { motion } from "framer-motion";
 
 const FilledCards = () => {
-    
   return (
-    <div className="grid gap-6 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 ">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: false }}
+      className="grid  lg:grid-cols-4 sm:grid-cols-2 grid-cols-1  mx-auto "
+    >
       {AchievementsData.map((achievement: IAchievement) => (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -24,7 +29,7 @@ const FilledCards = () => {
           <SpotlightCard achievement={achievement} />
         </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

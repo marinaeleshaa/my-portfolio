@@ -12,7 +12,7 @@ const AchievementsData : IAchievement[] = [
     title: "Complete Web & Mobile Designer (UI / UX)",
     instructors: ["Andrei Neagoie", "Daniel Schifano"],
     platform: "Udemy",
-    description: "Complete UI/UX & Web Design course focused on modern design principles, Figma, prototyping, design systems, responsive web/mobile interfaces, and converting designs to code (HTML & CSS) with hands-on real projects and portfolio building.",
+    description: "UI/UX training covering modern design principles, Figma workflows, prototyping, and building clean responsive layouts.",
     duration: "11/2025 – Present"
   },
   {
@@ -20,7 +20,7 @@ const AchievementsData : IAchievement[] = [
     title: "ITI Intensive Program, Full-Stack MERN",
     instructors: [],
     platform: "ITI - Information Technology Institute",
-    description: "Covering MERN, Next.js, Angular, and NestJS, advanced UI concepts, Git/GitHub, and real-world projects. Gained strong front-end and back-end skills through intensive hands-on training.",
+    description: "Intensive full-stack training in MERN, Next.js, Angular, and Git with practical projects to build strong development skills.",
     duration: "07/2025 – Present"
   },
   {
@@ -28,7 +28,7 @@ const AchievementsData : IAchievement[] = [
     title: "PRO-FRONTEND",
     instructors: ["Muhammad Naga"],
     platform: "Codeawy - Udemy",
-    description: "Hands-on training in React, Redux, and TypeScript, focusing on building responsive UIs, API integration, state management, routing, and Tailwind CSS. Includes real-world projects and clean-code best practices to prepare for professional front-end development.",
+    description: "Practical front-end training focused on React, Redux, TypeScript, APIs, routing, and clean UI development with real projects.",
     duration: "02/2025 – 05/2025"
   },
   {
@@ -36,7 +36,7 @@ const AchievementsData : IAchievement[] = [
     title: "FRONTEND",
     instructors: [],
     platform: "SEF Academy",
-    description: "Focused on front-end fundamentals (HTML, CSS, JavaScript), with hands-on tasks and real projects. Gained strong practical skills in building responsive interfaces and applying modern UI techniques through continuous practice and project-based learning.",
+    description: "Front-end fundamentals program covering HTML, CSS, JavaScript, and responsive design through tasks and real hands-on projects.",
     duration: "08/2024 – 01/2025"
   }
 ];

@@ -24,8 +24,7 @@ import {
   VscHome,
   VscSettingsGear,
 } from "react-icons/vsc";
-import { FaTasks } from "react-icons/fa";
-
+import { FaLaptopCode, FaTasks } from "react-icons/fa";
 
 export type DockItemData = {
   icon: string; // string not JSX (important for SSR)
@@ -57,9 +56,8 @@ type DockItemProps = {
 const iconMap: Record<string, React.ReactNode> = {
   home: <VscHome size={18} />,
   about: <VscAccount size={18} />,
-  achievements:<FaTasks size={18} />,
-
-  settings: <VscSettingsGear size={18} />,
+  achievements: <FaTasks size={18} />,
+  technology: <FaLaptopCode size={18} />,
 };
 
 function DockItem({
@@ -167,7 +165,7 @@ export default function Dock({
       case "Home":
         onClick = () => {
           const hero = document.getElementById("heroSection");
-          hero?.scrollIntoView({ behavior: "smooth"});
+          hero?.scrollIntoView({ behavior: "smooth" });
         };
         break;
       case "About Me":
@@ -176,10 +174,16 @@ export default function Dock({
           about?.scrollIntoView({ behavior: "smooth" });
         };
         break;
-        case "Achievements":
+      case "Achievements":
         onClick = () => {
           const achievements = document.getElementById("achievementsSection");
           achievements?.scrollIntoView({ behavior: "smooth" });
+        };
+        break;
+      case "Technology":
+        onClick = () => {
+          const technology = document.getElementById("technologySection");
+          technology?.scrollIntoView({ behavior: "smooth" });
         };
         break;
       default:

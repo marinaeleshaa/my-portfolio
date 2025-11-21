@@ -5,7 +5,7 @@ const navData = () => {
     { icon: "home", label: "Home" },
     { icon: "about", label: "About Me" },
     { icon: "achievements", label: "Achievements" },
-    { icon: "settings", label: "Settings" },
+    { icon: "technology", label: "Technology" },
   ];
 };
 

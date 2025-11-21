@@ -66,7 +66,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative rounded-lg border border-neutral-900 bg-black  p-6 md:p-8 ${className}`}
+      className={`relative rounded-lg border border-neutral-900 bg-black  p-4 ${className}`}
     >
       {/* Corner accent */}
       <div
@@ -83,7 +83,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
         }}
       />
       
-      <div className="relative z-10 min-h-[280px] flex flex-col">
+      <div className="relative z-10 h-[350px] flex flex-col">
         <div className="shrink-0">
           {/* Platform Badge */}
           {platform && (
@@ -96,28 +96,27 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
           )}
 
           {/* Title */}
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+          <h3 className="text-base md:text-lg font-bold text-white mb-3">
             {title}
           </h3>
         </div>
 
         {/* Description with tooltip */}
         {description && (
-          <div className="relative flex-1 mb-4">
+          <div className="relative flex-1 mb-4 text-sm">
             <p 
               ref={descriptionRef}
-              className="leading-relaxed line-clamp-2" 
+              className="leading-relaxed " 
               style={{ color: '#B19EEF' }}
-              onMouseEnter={() => isTextClamped && setShowTooltip(true)}
-              onMouseLeave={() => setShowTooltip(false)}
+              
             >
               {description}
             </p>
             
             {/* Tooltip */}
-            {showTooltip && isTextClamped && (
-              <div 
-                className="absolute z-400 left-0 right-0 top-full mt-2 p-4 rounded-lg shadow-2xl border max-w-md"
+            {/* {showTooltip && isTextClamped && (
+              <div
+                className="absolute  z-400 left-0 right-0 top-full mt-2 p-4 rounded-lg shadow-2xl border max-w-md"
                 style={{ 
                   backgroundColor: '#1a1a1a', 
                   color: '#B19EEF',
@@ -126,7 +125,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
               >
                 <p className="text-sm leading-relaxed">{description}</p>
               </div>
-            )}
+            )} */}
           </div>
         )}
 
