@@ -1,14 +1,18 @@
-import ProjectCards from '@/components/Projects/ProjectCards'
-import ProjectContent from '@/components/Projects/ProjectContent'
-import React from 'react'
+import ProjectCards from "@/components/Projects/ProjectCards";
+import ProjectContent from "@/components/Projects/ProjectContent";
+import ProjectsHero from "@/components/Projects/ProjectsHero";
+import React from "react";
 
 const ProjectsSection = () => {
   return (
-    <div className='max-w-6xl mx-auto px-4 md:px-8 lg:px-2'>
-        <ProjectContent/>
-        <ProjectCards/>
+    <div className="w-full max-w-6xl mx-auto px-4 space-y-10 relative pb-2 flex flex-col   md:px-8 lg:px-0">
+      <ProjectsHero />
+      <div>
+        <ProjectContent />
+        <ProjectCards />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectsSection
+export default ProjectsSection;
