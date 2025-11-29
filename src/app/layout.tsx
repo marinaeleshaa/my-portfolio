@@ -7,11 +7,7 @@ import {
   Inconsolata,
 } from "next/font/google";
 import "./globals.css";
-import Dock from "@/components/common/Dock";
-import navData from "@/data/navData";
-import { Provider } from "react-redux";
 import ClientProviders from "@/components/common/ClientProviders";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,17 +45,27 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 }) {
-  const items = navData(); // بيانات فقط بدون JSX أو onClick
-
   return (
     <html lang="en" className={rubik.className}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} antialiased bg-black`}
       >
         <ClientProviders>{children}</ClientProviders>
-       
+        {/* <div className="relative min-h-screen">
+          {children}
+
+          <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2">
+            <Dock
+              items={items}
+              panelHeight={68}
+              baseItemSize={50}
+              magnification={70}
+              className="text-white"
+            />
+          </div>
+        </div> */}
       </body>
     </html>
   );
