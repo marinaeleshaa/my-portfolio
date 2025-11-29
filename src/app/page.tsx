@@ -22,7 +22,7 @@ export default function Home() {
         <div id="technologySection" className="">
           <TechnologySection />
         </div>
-        <div id="projectsSection" className="">
+        <div id="projectsSection" className="min-h-screen">
           <ProjectsSection />
         </div>
       </div>
