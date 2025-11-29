@@ -2,6 +2,7 @@ import SplashCursor from "@/components/common/SplashCursor";
 import AboutSection from "@/sections/AboutSection";
 import AchievementsSection from "@/sections/AchievementsSection";
 import HeroSection from "@/sections/HeroSection";
+import ProjectsSection from "@/sections/ProjectsSection";
 import TechnologySection from "@/sections/TechnologySection";
 
 export default function Home() {
@@ -18,8 +19,11 @@ export default function Home() {
         <div id="achievementsSection" className="">
           <AchievementsSection />
         </div>
-        <div id="technologySection" className="min-h-screen">
+        <div id="technologySection" className="">
           <TechnologySection />
+        </div>
+        <div>
+          <ProjectsSection />
         </div>
       </div>
     </div>

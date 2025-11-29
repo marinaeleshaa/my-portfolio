@@ -12,7 +12,7 @@ const LeftSide = () => {
       transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
       viewport={{ once: false, amount: 0.7 }}
     >
-      <div className=" flex gap-8 w-fit h-[300px] relative">
+      <div className=" flex gap-8 w-fit h-[300px] mx-auto relative">
         <LogoLoop
           logos={TechLogos().techLogos1}
           speed={20}
