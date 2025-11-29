@@ -4,8 +4,13 @@ import { Provider } from "react-redux";
 import { store } from "@/redux/Store";
 import Dock from "@/components/common/Dock";
 import navData from "@/data/navData";
+import { ReactNode } from "react";
 
-export default function ClientProviders({ children }: any) {
+export default function ClientProviders({
+  children,
+}: {
+  readonly children: ReactNode;
+}) {
   const items = navData();
 
   return (

@@ -58,6 +58,7 @@ const iconMap: Record<string, React.ReactNode> = {
   about: <VscAccount size={18} />,
   achievements: <FaTasks size={18} />,
   technology: <FaLaptopCode size={18} />,
+  projects: <VscArchive size={18} />,
 };
 
 function DockItem({
@@ -184,6 +185,12 @@ export default function Dock({
         onClick = () => {
           const technology = document.getElementById("technologySection");
           technology?.scrollIntoView({ behavior: "smooth" });
+        };
+        break;
+      case "Projects":
+        onClick = () => {
+          const projects = document.getElementById("projectsSection");
+          projects?.scrollIntoView({ behavior: "smooth" });
         };
         break;
       default:

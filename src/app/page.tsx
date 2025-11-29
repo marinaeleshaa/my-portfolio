@@ -22,7 +22,7 @@ export default function Home() {
         <div id="technologySection" className="">
           <TechnologySection />
         </div>
-        <div>
+        <div id="projectsSection" className="">
           <ProjectsSection />
         </div>
       </div>
