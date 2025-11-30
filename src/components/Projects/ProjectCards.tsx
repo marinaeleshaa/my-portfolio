@@ -29,13 +29,14 @@ const ProjectCards = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
       viewport={{ once: false, amount: 0.7 }}
-      className=""
+      className="flex flex-col items-center justify-center gap-5"
     >
       <Stack
         cardsData={images}
         randomRotation={false}
         className="w-[250px]  h-[200px]  sm:w-[400px] sm:h-[300px] md:w-[350px] md:h-[250px] lg:w-[500px] lg:h-[300px]"
       />
+      <p className="text-sm capitalize text-[#b19eef] animate-bounce">swipe to see more</p>
     </motion.div>
   );
 };
