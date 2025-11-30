@@ -1,7 +1,13 @@
 "use client";
+import { RootState } from "@/redux/Store";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 const ProjectContent = () => {
+  const { activeProject } = useSelector(
+    (state: RootState) => state.project
+  );
+//   console.log(activeProject, active);
   return (
     <motion.div
       className="w-full md:max-w-xl lg:max-w-2xl relative"
@@ -28,7 +34,7 @@ const ProjectContent = () => {
 
       {/* Title */}
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold   capitalize text-white">
-        Technology
+        {activeProject.title}
       </h2>
 
       {/* Subtitle */}
@@ -36,18 +42,17 @@ const ProjectContent = () => {
         className="text-sm  sm:text-base md:text-lg text-[#B19EEF] max-w-xl mb-4 md:mb-6"
         style={{ color: "#B19EEF" }}
       >
-        These are the skills and technologies I work with every day.
+        {activeProject.subtitle}
       </h3>
 
       {/* Paragraph */}
-      <p
-        className="text-base sm:text-lg leading-relaxed"
-        style={{ color: "#B19EEF" }}
-      >
-        I specialize in building modern, responsive, and user-focused web
-        interfaces.I’m always exploring new tools and pushing my skills forward
-        to create clean, scalable, and high-performance applications.
-      </p>
+      <ul className="ml-5 leading-relaxed list-disc text-base sm:text-lg text-[#B19EEF]">
+        {activeProject.description.map((item, index) => (
+          <li key={activeProject.id + index} className="marker:text-[#ff9ffc]">
+            {item}
+          </li>
+        ))}
+      </ul>
 
       {/* Small Decorative Circles */}
       <div className="flex gap-3 mt-6 md:mt-8">
