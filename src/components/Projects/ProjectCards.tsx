@@ -7,16 +7,24 @@ import { motion } from "framer-motion";
 const ProjectCards = () => {
   const images: IProjectCard[] = [
     {
-      id: 2,
-      img: "/projects/1.jpg",
+      id: 6,
+      img: "/projects/recipe.png",
     },
     {
-      id: 3,
-      img: "/projects/2.jpg",
+      id: 5,
+      img: "/projects/todo.png",
     },
     {
       id: 4,
-      img: "/projects/3.jpg",
+      img: "/projects/memoryGame.png",
+    },
+    {
+      id: 3,
+      img: "/projects/booksy.png",
+    },
+    {
+      id: 2,
+      img: "/projects/travella.png",
     },
     {
       id: 1,

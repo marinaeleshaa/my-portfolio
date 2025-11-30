@@ -101,7 +101,7 @@ export default function Stack({
       hasInitialized.current = true;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Only run once on mount
+  }, [dispatch,cards]); // Only run once on mount
 
   // Calculate random rotations once per card ID based on initial cards to prevent recalculation
   const randomRotations = useMemo(() => {
@@ -112,26 +112,25 @@ export default function Stack({
     return rotations;
   }, [initialCards, randomRotation]);
 
-  const sendToBack = useCallback((id: number) => {
+const sendToBack = useCallback((id: number) => {
   setCards((prev) => {
     const newCards = [...prev];
     const index = newCards.findIndex((card) => card.id === id);
     if (index === -1) return prev;
 
-    // اسحب الكارت
     const [card] = newCards.splice(index, 1);
-    // وحطيه تحت
     newCards.unshift(card);
-
-    // ⇦ أهم سطر: الكارت اللي فوق بعد الترتيب
-    const topCard = newCards[newCards.length - 1];
-
-    // ⇦ بعت الـ id الصح لِـ Redux
-    dispatch(setActiveProjectAction(topCard.id));
 
     return newCards;
   });
-}, [dispatch]);
+}, []);
+useEffect(() => {
+  if (cards.length > 0) {
+    const topCard = cards[cards.length - 1];
+    dispatch(setActiveProjectAction(topCard.id));
+  }
+}, [cards, dispatch]);
+
 
 
   return (

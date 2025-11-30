@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 
 const ProjectContent = () => {
-  const { activeProject } = useSelector(
-    (state: RootState) => state.project
-  );
-//   console.log(activeProject, active);
+  const { activeProject } = useSelector((state: RootState) => state.project);
+  //   console.log(activeProject, active);
   return (
     <motion.div
       className="w-full md:max-w-xl lg:max-w-2xl relative"
@@ -53,6 +51,30 @@ const ProjectContent = () => {
           </li>
         ))}
       </ul>
+
+      {/* link */}
+      <a
+        href={activeProject.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 mt-6 px-6 py-3 text-sm sm:text-base font-medium text-white bg-linear-to-r from-[#FF9FFC] to-[#B19EEF] rounded-lg hover:shadow-lg hover:shadow-[#FF9FFC]/30 transition-all duration-300 hover:scale-105 group"
+      >
+        {activeProject.deployed ? " Visit Project" : "Show Project Code"}
+
+        <svg
+          className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+          />
+        </svg>
+      </a>
 
       {/* Small Decorative Circles */}
       <div className="flex gap-3 mt-6 md:mt-8">

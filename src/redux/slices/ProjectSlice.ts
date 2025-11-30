@@ -6,6 +6,7 @@ export interface IProjectCard {
   subtitle: string;
   description: string[];
   link: string;
+  deployed: boolean;
 }
 
 export interface ProjectState {
