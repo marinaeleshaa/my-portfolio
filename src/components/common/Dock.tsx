@@ -110,7 +110,7 @@ function DockLabel({ children, isHovered }: any) {
 
   useEffect(() => {
     if (!isHovered) return;
-    const unsub = isHovered.on("change", (v) => {
+    const unsub = isHovered.on("change", (v:unknown) => {
       setIsVisible(v === 1);
     });
     return () => unsub();
@@ -228,7 +228,7 @@ export default function Dock({
         {enhancedItems.map((item, idx) => (
           <DockItem
             key={idx}
-            onClick={item.onClick}
+            onClick={item.onClick!}
             mouseX={mouseX}
             spring={spring}
             distance={distance}
