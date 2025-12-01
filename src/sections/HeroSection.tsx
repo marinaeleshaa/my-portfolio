@@ -2,6 +2,7 @@
 import LiquidEther from "@/components/Hero";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { MdMailOutline } from "react-icons/md";
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState("");
@@ -41,9 +42,7 @@ const HeroSection = () => {
 
   return (
     <div>
-      <div
-        className="bg-black relative overflow-hidden w-full h-screen "
-      >
+      <div className="bg-black relative overflow-hidden w-full h-screen ">
         <LiquidEther
           colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
           mouseForce={20}
@@ -85,7 +84,8 @@ const HeroSection = () => {
             {/* Greeting with fade in */}
             <div className="overflow-hidden">
               <p className="capitalize text-xl md:text-2xl lg:text-3xl my-text-light tracking-wider animate-fade-slide-down">
-                <span className="inline-block animate-wave"></span> Hello, I&apos;m
+                <span className="inline-block animate-wave"></span> Hello,
+                I&apos;m
               </p>
             </div>
 
@@ -131,7 +131,7 @@ const HeroSection = () => {
           {/* CTA Buttons with hover effects */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center  animate-fade-in-up">
             <Link
-              href="#"
+              href="#projectsSection"
               className="my-main-btn group relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 flex items-center justify-center"
             >
               <span className="relative z-10 flex items-center gap-2 ">
@@ -144,20 +144,18 @@ const HeroSection = () => {
             </Link>
 
             <Link
-              href="#"
+              href="#contactSection"
               className="my-second-btn group relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/30 flex items-center justify-center"
             >
               <span className="relative z-10 flex items-center gap-2">
                 Get In Touch{" "}
                 <span className="inline-block transition-transform group-hover:scale-110">
-                  ✉
+                  <MdMailOutline />
                 </span>
               </span>
               <div className="absolute inset-0 bg-linear-to-r from-[#5227FF]/10 to-[#FF9FFC]/10 scale-0 group-hover:scale-100 transition-transform duration-300 rounded-full" />
             </Link>
           </div>
-
-       
         </div>
 
         {/* Floating particles */}

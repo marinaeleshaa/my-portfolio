@@ -18,12 +18,9 @@ import React, {
   useState,
 } from "react";
 
-import {
-  VscAccount,
-  VscArchive,
-  VscHome,
-  VscSettingsGear,
-} from "react-icons/vsc";
+import { VscAccount, VscArchive, VscHome } from "react-icons/vsc";
+import { MdMailOutline } from "react-icons/md";
+
 import { FaLaptopCode, FaTasks } from "react-icons/fa";
 
 export type DockItemData = {
@@ -59,6 +56,7 @@ const iconMap: Record<string, React.ReactNode> = {
   achievements: <FaTasks size={18} />,
   technology: <FaLaptopCode size={18} />,
   projects: <VscArchive size={18} />,
+  contact: <MdMailOutline size={18} />,
 };
 
 function DockItem({
@@ -191,6 +189,12 @@ export default function Dock({
         onClick = () => {
           const projects = document.getElementById("projectsSection");
           projects?.scrollIntoView({ behavior: "smooth" });
+        };
+        break;
+      case "Contact":
+        onClick = () => {
+          const contact = document.getElementById("contactSection");
+          contact?.scrollIntoView({ behavior: "smooth" });
         };
         break;
       default:
