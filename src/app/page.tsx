@@ -16,7 +16,7 @@ export default function Home() {
         <section id="heroSection" aria-label="Hero section">
           <HeroSection />
         </section>
-        <div className="md:w-[75%] mx-auto px-10 md:px-0 space-y-40">
+        <div className="md:w-[75%] mx-auto p-4 md:px-0 space-y-40">
           <section id="aboutSection" aria-label="About Marina Eleshaa">
             <AboutSection />
           </section>

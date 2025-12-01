@@ -98,7 +98,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen  flex items-center justify-center p-4">
+    <div className=" overflow-hidden flex items-center justify-center p-4">
       <style>{`
         @keyframes borderRotate {
           0% {
