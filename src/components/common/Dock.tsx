@@ -222,7 +222,7 @@ export default function Dock({
           isHovered.set(0);
           mouseX.set(Infinity);
         }}
-        className={`${className} absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-4 rounded-2xl border-neutral-700 backdrop-blur-3xl bg-white/10 z-999 border-2 pb-2 px-4 `}
+        className={`${className} absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-2 rounded-2xl border-neutral-700 backdrop-blur-3xl bg-white/10 z-999 border-2 pb-2 px-2 `}
         style={{ height: panelHeight }}
       >
         {enhancedItems.map((item, idx) => (
