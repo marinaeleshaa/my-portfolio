@@ -222,7 +222,7 @@ const ContactForm = () => {
                     className={`w-full px-6 py-4 bg-gray-800/40 border-2 rounded-2xl text-white placeholder-gray-500 focus:outline-none focus:border-[#FF9FFC] transition-all duration-300 backdrop-blur-sm ${
                       errors.name ? "border-red-500/60" : "border-[#5227FF]/30"
                     }`}
-                    placeholder="John Doe"
+                    placeholder="Enter your name"
                   />
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#B19EEF]/0 via-[#5227FF]/0 to-[#FF9FFC]/0 group-focus-within:from-[#B19EEF]/10 group-focus-within:via-[#5227FF]/10 group-focus-within:to-[#FF9FFC]/10 transition-all duration-500 pointer-events-none"></div>
                 </div>
@@ -256,7 +256,7 @@ const ContactForm = () => {
                     className={`w-full px-6 py-4 bg-gray-800/40 border-2 rounded-2xl text-white placeholder-gray-500 focus:outline-none focus:border-[#FF9FFC] transition-all duration-300 backdrop-blur-sm ${
                       errors.phone ? "border-red-500/60" : "border-[#5227FF]/30"
                     }`}
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+20 123 456 789"
                   />
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#B19EEF]/0 via-[#5227FF]/0 to-[#FF9FFC]/0 group-focus-within:from-[#B19EEF]/10 group-focus-within:via-[#5227FF]/10 group-focus-within:to-[#FF9FFC]/10 transition-all duration-500 pointer-events-none"></div>
                 </div>
