@@ -61,22 +61,6 @@ const HeroSection = () => {
           autoRampDuration={0.6}
         />
 
-        {/* Animated grid overlay */}
-        {/* <div
-          className="absolute inset-0 opacity-5 pointer-events-none"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px',
-          }}
-        /> */}
-
-        {/* Floating geometric shapes */}
-        {/* <div className="absolute top-16 right-20 w-20 h-20 border-2 border-purple-500/20 rounded-lg animate-spin-slow" />
-        <div className="absolute bottom-20 left-16 w-16 h-16 border-2 border-pink-500/20 rounded-full animate-pulse" />
-        <div className="absolute top-1/3 left-20 w-12 h-12 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rotate-45 animate-float" /> */}
 
         {/* Main Content */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit space-y-12 min-w-[80%] mx-auto">

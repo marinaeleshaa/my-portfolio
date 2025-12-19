@@ -2,17 +2,14 @@
 import { motion } from "framer-motion";
 import { RootState } from "@/redux/Store";
 import { useSelector } from "react-redux";
+import Animate from "../common/Animate";
 
 const ProjectContent = () => {
   const { activeProject } = useSelector((state: RootState) => state.project);
 
   return (
-    <motion.div
+    <Animate
       className="w-full md:max-w-xl lg:max-w-2xl relative"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.7 }}
     >
       {/* Decorative accent bar */}
       <div className="flex gap-2 mb-6">
@@ -98,7 +95,7 @@ const ProjectContent = () => {
         <div className="w-20 h-0.5 rounded-full bg-gradient-to-r from-transparent to-[#B19EEF]"></div>
         <div className="w-2 h-0.5 rounded-full bg-[#FF9FFC]"></div>
       </div>
-    </motion.div>
+    </Animate>
   );
 };
 

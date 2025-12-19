@@ -1,17 +1,11 @@
-"use client";
 import TechLogos from "@/data/techLogos";
 import LogoLoop from "./LogoLoop";
 
-import { motion } from "framer-motion";
+import Animate from "../common/Animate";
 
 const LeftSide = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-      viewport={{ once: false, amount: 0.7 }}
-    >
+    <Animate delay={0.5}>
       <div className=" flex gap-8 w-fit h-[300px] mx-auto relative">
         <LogoLoop
           logos={TechLogos().techLogos1}
@@ -58,7 +52,7 @@ const LeftSide = () => {
           ariaLabel="Technology partners"
         />
       </div>
-    </motion.div>
+    </Animate>
   );
 };
 

@@ -1,15 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import React from "react";
+import Animate from "../common/Animate";
 
 const LeftSide = () => {
   return (
-    <motion.div
+    <Animate
       className="w-full md:max-w-xl lg:max-w-2xl relative"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.7 }}
+    
     >
       <div
         className="absolute -top-4 -left-4 w-12 h-12 md:w-16 md:h-16 rounded-tl-lg border-l-4 border-t-4 opacity-60"
@@ -41,7 +39,7 @@ const LeftSide = () => {
         <div className="w-2 h-2 rounded-full my-pink-bg"></div>
         <div className="w-2 h-2 rounded-full my-light-bg"></div>
       </div>
-    </motion.div>
+    </Animate>
   );
 };
 

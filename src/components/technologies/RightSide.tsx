@@ -1,16 +1,8 @@
-"use client";
-import { motion } from "framer-motion";
-import React from "react";
+import Animate from "../common/Animate";
 
 const RightSide = () => {
   return (
-    <motion.div
-      className="w-full md:max-w-xl lg:max-w-2xl relative"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.7 }}
-    >
+    <Animate className="w-full md:max-w-xl lg:max-w-2xl relative">
       {/* Decorative Corners */}
       <div
         className="absolute -top-4 -left-4 w-12 h-12 md:w-16 md:h-16 rounded-tl-lg border-l-4 border-t-4 opacity-60"
@@ -21,11 +13,6 @@ const RightSide = () => {
         className="absolute -bottom-4 -right-4 w-12 h-12 md:w-16 md:h-16 rounded-br-lg border-r-4 border-b-4 opacity-60"
         style={{ borderColor: "#FF9FFC" }}
       ></div>
-
-      {/* <div
-        className="absolute -top-4 -right-4 w-12 h-12 md:w-16 md:h-16 rounded-tr-lg border-r-4 border-t-4 opacity-60"
-        style={{ borderColor: "#FF9FFC" }}
-      ></div> */}
 
       {/* Title */}
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold   capitalize text-white">
@@ -56,7 +43,7 @@ const RightSide = () => {
         <div className="w-2 h-2 rounded-full my-pink-bg"></div>
         <div className="w-2 h-2 rounded-full my-light-bg"></div>
       </div>
-    </motion.div>
+    </Animate>
   );
 };
 
