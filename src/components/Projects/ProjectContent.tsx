@@ -1,7 +1,7 @@
 "use client";
-import { motion } from 'framer-motion';
-import { RootState } from '@/redux/Store';
-import { useSelector } from 'react-redux';
+import { motion } from "framer-motion";
+import { RootState } from "@/redux/Store";
+import { useSelector } from "react-redux";
 
 const ProjectContent = () => {
   const { activeProject } = useSelector((state: RootState) => state.project);
@@ -35,14 +35,6 @@ const ProjectContent = () => {
               </p>
             </div>
           )}
-          
-          {/* {activeProject.subtitle && (
-            <div className="pl-4 border-l-2 border-[#B19EEF]/40">
-              <p className="text-base sm:text-lg md:text-xl text-[#B19EEF] leading-relaxed">
-                {activeProject.subtitle}
-              </p>
-            </div>
-          )} */}
         </div>
       </div>
 
@@ -52,11 +44,11 @@ const ProjectContent = () => {
           <div className="w-1.5 h-1.5 rounded-full bg-[#FF9FFC]"></div>
           Technical Highlights
         </h3>
-        
+
         <ul className="space-y-3">
           {activeProject.description.technical.map((item, index) => (
-            <li 
-              key={activeProject.id + index} 
+            <li
+              key={activeProject.id + index}
               className="flex gap-3 text-base sm:text-lg text-[#B19EEF]"
             >
               <span className="text-[#FF9FFC] mt-1.5 flex-shrink-0">→</span>
@@ -74,8 +66,10 @@ const ProjectContent = () => {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#FF9FFC] to-[#B19EEF] rounded-xl hover:shadow-2xl hover:shadow-[#FF9FFC]/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 group"
         >
-          <span>{activeProject.deployed ? 'Visit Live Project' : 'View Source Code'}</span>
-          
+          <span>
+            {activeProject.deployed ? "Visit Live Project" : "View Source Code"}
+          </span>
+
           <svg
             className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
             fill="none"
