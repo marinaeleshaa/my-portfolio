@@ -30,6 +30,10 @@ const ProjectCards = () => {
       id: 1,
       img: "/projects/eduverse.png",
     },
+    {
+      id: 0,
+      img: "/projects/studio.png",
+    }
   ];
   return (
     <motion.div

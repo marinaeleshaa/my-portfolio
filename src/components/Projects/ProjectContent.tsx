@@ -1,11 +1,11 @@
 "use client";
-import { RootState } from "@/redux/Store";
-import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { motion } from 'framer-motion';
+import { RootState } from '@/redux/Store';
+import { useSelector } from 'react-redux';
 
 const ProjectContent = () => {
   const { activeProject } = useSelector((state: RootState) => state.project);
-  //   console.log(activeProject, active);
+
   return (
     <motion.div
       className="w-full md:max-w-xl lg:max-w-2xl relative"
@@ -14,73 +14,95 @@ const ProjectContent = () => {
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.7 }}
     >
-      {/* Decorative Corners */}
-      {/* <div
-        className="absolute -top-4 -left-4 w-12 h-12 md:w-16 md:h-16 rounded-tl-lg border-l-4 border-t-4 opacity-60"
-        style={{ borderColor: "#FF9FFC" }}
-      ></div>
+      {/* Decorative accent bar */}
+      <div className="flex gap-2 mb-6">
+        <div className="w-12 h-1 rounded-full bg-gradient-to-r from-[#FF9FFC] to-[#B19EEF]"></div>
+        <div className="w-4 h-1 rounded-full bg-[#B19EEF]/50"></div>
+      </div>
 
-      <div
-        className="absolute -bottom-4 -right-4 w-12 h-12 md:w-16 md:h-16 rounded-br-lg border-r-4 border-b-4 opacity-60"
-        style={{ borderColor: "#FF9FFC" }}
-      ></div> */}
+      {/* Header Section */}
+      <div className="mb-8 space-y-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold capitalize text-white leading-tight">
+          {activeProject.title}
+        </h2>
 
-      {/* <div
-        className="absolute -top-4 -right-4 w-12 h-12 md:w-16 md:h-16 rounded-tr-lg border-r-4 border-t-4 opacity-60"
-        style={{ borderColor: "#FF9FFC" }}
-      ></div> */}
+        {/* Description cards */}
+        <div className="space-y-3">
+          {activeProject.description.main && (
+            <div className="pl-4 border-l-2 border-[#FF9FFC]/40">
+              <p className="text-base sm:text-lg md:text-xl text-[#B19EEF] leading-relaxed">
+                {activeProject.description.main}
+              </p>
+            </div>
+          )}
+          
+          {/* {activeProject.subtitle && (
+            <div className="pl-4 border-l-2 border-[#B19EEF]/40">
+              <p className="text-base sm:text-lg md:text-xl text-[#B19EEF] leading-relaxed">
+                {activeProject.subtitle}
+              </p>
+            </div>
+          )} */}
+        </div>
+      </div>
 
-      {/* Title */}
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold   capitalize text-white">
-        {activeProject.title}
-      </h2>
+      {/* Technical Details Section */}
+      <div className="mb-8 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+        <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <div className="w-1.5 h-1.5 rounded-full bg-[#FF9FFC]"></div>
+          Technical Highlights
+        </h3>
+        
+        <ul className="space-y-3">
+          {activeProject.description.technical.map((item, index) => (
+            <li 
+              key={activeProject.id + index} 
+              className="flex gap-3 text-base sm:text-lg text-[#B19EEF]"
+            >
+              <span className="text-[#FF9FFC] mt-1.5 flex-shrink-0">→</span>
+              <span className="leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      {/* Subtitle */}
-      <h3
-        className="text-sm  sm:text-base md:text-lg text-[#B19EEF] max-w-xl mb-4 md:mb-6"
-        style={{ color: "#B19EEF" }}
-      >
-        {activeProject.subtitle}
-      </h3>
-
-      {/* Paragraph */}
-      <ul className="ml-5 leading-relaxed list-disc text-base sm:text-lg text-[#B19EEF]">
-        {activeProject.description.map((item, index) => (
-          <li key={activeProject.id + index} className="marker:text-[#ff9ffc]">
-            {item}
-          </li>
-        ))}
-      </ul>
-
-      {/* link */}
-      <a
-        href={activeProject.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 mt-6 px-6 py-3 text-sm sm:text-base font-medium text-white bg-linear-to-r from-[#FF9FFC] to-[#B19EEF] rounded-lg hover:shadow-lg hover:shadow-[#FF9FFC]/30 transition-all duration-300 hover:scale-105 group"
-      >
-        {activeProject.deployed ? " Visit Project" : "Show Project Code"}
-
-        <svg
-          className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      {/* CTA Section */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+        <a
+          href={activeProject.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#FF9FFC] to-[#B19EEF] rounded-xl hover:shadow-2xl hover:shadow-[#FF9FFC]/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 group"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
-          />
-        </svg>
-      </a>
+          <span>{activeProject.deployed ? 'Visit Live Project' : 'View Source Code'}</span>
+          
+          <svg
+            className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+        </a>
 
-      {/* Small Decorative Circles */}
-      <div className="flex gap-3 mt-6 md:mt-8">
-        <div className="w-2 h-2 rounded-full my-dark-bg"></div>
-        <div className="w-2 h-2 rounded-full my-pink-bg"></div>
-        <div className="w-2 h-2 rounded-full my-light-bg"></div>
+        {/* Decorative Circles */}
+        <div className="flex gap-3">
+          <div className="w-3 h-3 rounded-full my-dark-bg shadow-lg"></div>
+          <div className="w-3 h-3 rounded-full my-pink-bg shadow-lg shadow-[#FF9FFC]/50"></div>
+          <div className="w-3 h-3 rounded-full my-light-bg shadow-lg"></div>
+        </div>
+      </div>
+
+      {/* Bottom decorative element */}
+      <div className="mt-8 flex gap-2 opacity-50">
+        <div className="w-20 h-0.5 rounded-full bg-gradient-to-r from-transparent to-[#B19EEF]"></div>
+        <div className="w-2 h-0.5 rounded-full bg-[#FF9FFC]"></div>
       </div>
     </motion.div>
   );

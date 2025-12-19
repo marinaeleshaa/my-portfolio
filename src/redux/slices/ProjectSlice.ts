@@ -4,7 +4,7 @@ export interface IProjectCard {
   id: number;
   title: string;
   subtitle: string;
-  description: string[];
+  description: { technical: string[] ; main: string; };
   link: string;
   deployed: boolean;
 }
