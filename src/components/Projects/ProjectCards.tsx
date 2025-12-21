@@ -8,32 +8,36 @@ import Animate from "../common/Animate";
 const ProjectCards = () => {
   const images: IProjectCard[] = [
     {
-      id: 6,
+      id: 8,
       img: "/projects/recipe.png",
     },
     {
-      id: 5,
+      id: 7,
       img: "/projects/todo.png",
     },
     {
-      id: 4,
+      id: 6,
       img: "/projects/memoryGame.png",
     },
     {
-      id: 3,
+      id: 5,
       img: "/projects/booksy.png",
     },
     {
-      id: 2,
+      id: 4,
       img: "/projects/travella.png",
     },
     {
-      id: 1,
+      id: 3,
       img: "/projects/eduverse.png",
     },
     {
-      id: 0,
+      id: 2,
       img: "/projects/studio.png",
+    },
+    {
+      id: 1,
+      img: "/projects/ecosphere.png",
     },
   ];
   return (
@@ -44,7 +48,7 @@ const ProjectCards = () => {
       <Stack
         cardsData={images}
         randomRotation={false}
-        className="w-[250px]  h-[200px]  sm:w-[400px] sm:h-[300px] md:w-[350px] md:h-[250px] lg:w-[500px] lg:h-[300px]"
+        className="w-62.5  h-50  sm:w-100 sm:h-75 md:w-87.5 md:h-62.5 lg:w-125 lg:h-75"
       />
       <p className="text-sm capitalize text-[#b19eef] animate-bounce">
         swipe to see more

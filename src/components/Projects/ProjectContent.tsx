@@ -13,13 +13,13 @@ const ProjectContent = () => {
     >
       {/* Decorative accent bar */}
       <div className="flex gap-2 mb-6">
-        <div className="w-12 h-1 rounded-full bg-gradient-to-r from-[#FF9FFC] to-[#B19EEF]"></div>
+        <div className="w-12 h-1 rounded-full bg-linear-to-r from-[#FF9FFC] to-[#B19EEF]"></div>
         <div className="w-4 h-1 rounded-full bg-[#B19EEF]/50"></div>
       </div>
 
       {/* Header Section */}
       <div className="mb-8 space-y-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize text-white leading-tight">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold capitalize text-white leading-tight">
           {activeProject.title}
         </h2>
 
@@ -27,7 +27,7 @@ const ProjectContent = () => {
         <div className="space-y-3">
           {activeProject.description.main && (
             <div className="pl-4 border-l-2 border-[#FF9FFC]/40">
-              <p className="text-base sm:text-lg md:text-xl text-[#B19EEF] leading-relaxed">
+              <p className="text-base  md:text-lg text-[#B19EEF] leading-relaxed">
                 {activeProject.description.main}
               </p>
             </div>
@@ -46,9 +46,9 @@ const ProjectContent = () => {
           {activeProject.description.technical.map((item, index) => (
             <li
               key={activeProject.id + index}
-              className="flex gap-3 text-base sm:text-lg text-[#B19EEF]"
+              className="flex gap-3 text-base sm:text- text-[#B19EEF]"
             >
-              <span className="text-[#FF9FFC] mt-1.5 flex-shrink-0">→</span>
+              <span className="text-[#FF9FFC] mt-1.5 shrink-0">→</span>
               <span className="leading-relaxed">{item}</span>
             </li>
           ))}
