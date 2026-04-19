@@ -18,18 +18,18 @@ export const projectData = [
   },
   {
     id: 2,
-    title: "El Beshara Studio",
+    title: "El Beshara Charity",
     subtitle:
       "Frontend Project (Production) | Next.js, React, TypeScript, Redux Toolkit, Tailwind CSS",
     description: {
-      main: "A multi-language website for a music studio with galleries, reels, and promotions.",
+      main: "A multi-language website for a Charity and its studio with galleries, reels, and promotions.",
       technical: [
         "Built with Next.js & TypeScript, supporting i18n (Arabic & English).",
         "Full admin dashboard for managing media and studio data.",
         "Cloudinary integration & Redux Toolkit for scalable state management.",
       ],
     },
-    link: "https://el-beshara-studio.vercel.app/",
+    link: "https://www.elbeshara-chartiry-egy.com/",
     deployed: true,
   },
   {

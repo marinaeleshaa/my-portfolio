@@ -13,7 +13,7 @@ const AchievementsData : IAchievement[] = [
     instructors: ["Andrei Neagoie", "Daniel Schifano"],
     platform: "Udemy",
     description: "UI/UX training covering modern design principles, Figma workflows, prototyping, and building clean responsive layouts.",
-    duration: "11/2025 – Present"
+    duration: "11/2025 – 4/2026"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const AchievementsData : IAchievement[] = [
     instructors: [],
     platform: "ITI - Information Technology Institute",
     description: "Intensive full-stack training in MERN, Next.js, Angular, and Git with practical projects to build strong development skills.",
-    duration: "07/2025 – Present"
+    duration: "07/2025 – 12/2025"
   },
   {
     id: 3,
