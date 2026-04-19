@@ -32,11 +32,11 @@
 }
 
 .my-main-btn{
-  @apply px-8 py-4   border-none capitalize rounded-full cursor-pointer bg-linear-to-br from-[#5227FF] to-[#FF9FFC] text-white;
+  @apply px-8 py-4   border-none capitalize rounded-2xl cursor-pointer bg-linear-to-br from-[#5227FF] to-[#FF9FFC] text-white;
 }
 
 .my-second-btn{
-  @apply px-8 py-4 border-2 capitalize rounded-full cursor-pointer  text-white;
+  @apply px-8 py-4 border-2 capitalize rounded-2xl cursor-pointer  text-white;
 }
 
 @theme inline {
